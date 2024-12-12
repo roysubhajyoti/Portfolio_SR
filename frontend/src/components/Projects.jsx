@@ -1,8 +1,17 @@
 import { PROJECTS } from "../constants/Info";
+import { motion } from "framer-motion";
+
 export const Projects = () => {
   return (
     <div className="border-b border-neutral-900 pb-4">
-      <h1 className="my-20 text-center text-violet-50 text-4xl">Projects</h1>
+      <motion.h1
+        className="my-20 text-center text-violet-50 text-4xl"
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ y: -50, opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        Projects
+      </motion.h1>
       <div className="">
         {PROJECTS.map((project, index) => {
           return (
@@ -10,7 +19,12 @@ export const Projects = () => {
               key={index}
               className="mb-8 flex flex-wrap justify-center lg:justify-center text-wrap"
             >
-              <div className="w-full lg:w-1/4">
+              <motion.div
+                className="w-full lg:w-1/4"
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 1, x: -100 }}
+                transition={{ duration: 0.5 }}
+              >
                 <img
                   src={project.image}
                   alt={project.title}
@@ -18,8 +32,14 @@ export const Projects = () => {
                   height={150}
                   className="mb-6 rounded"
                 />
-              </div>
-              <div className="w-full lg:w-3/4 max-w-xl ">
+              </motion.div>
+
+              <motion.div
+                className="w-full lg:w-3/4 max-w-xl "
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 1, x: 100 }}
+                transition={{ duration: 0.5 }}
+              >
                 <div className="flex gap-4 text-center mb-2">
                   <h6 className="mb-2 text-violet-200 text-wrap font-semibold">
                     {project.title}
@@ -43,7 +63,7 @@ export const Projects = () => {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             </div>
           );
         })}

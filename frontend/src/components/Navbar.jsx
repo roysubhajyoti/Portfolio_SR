@@ -1,10 +1,15 @@
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { CONTACTS } from "../constants/Info";
-
+import { motion } from "framer-motion";
 export const Navbar = () => {
   return (
-    <nav className="mb-20 flex items-center justify-between py-6">
+    <motion.nav
+      className="mb-20 flex items-center justify-between py-6"
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0 }}
+    >
       <div className="flex flex-shrink-0 items-center text-violet-50 text-3xl">
         SR
       </div>
@@ -24,6 +29,6 @@ export const Navbar = () => {
           <FaLinkedin className="text-violet-50" />
         </a>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
