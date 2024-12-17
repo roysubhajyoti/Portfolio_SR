@@ -11,7 +11,7 @@ export const Navbar = () => {
       transition={{ duration: 0.5, delay: 0 }}
     >
       <div className="flex flex-shrink-0 items-center text-violet-50 text-3xl">
-        SR
+        SJR
       </div>
       <div className=" m-8 flex items-center justify-center gap-4 text-xl">
         <a
