@@ -3,7 +3,7 @@ import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiMysql } from "react-icons/si";
+// import { SiMysql } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaGitAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -87,14 +87,6 @@ export const Technology = () => {
           <FaNodeJs className="text-5xl text-nodejsColor" />
         </motion.div>
 
-        <motion.div
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-          variants={iconVariants(6.2)}
-          initial="initial"
-          animate="animate"
-        >
-          <SiMysql className="text-5xl text-mySqlLogo" />
-        </motion.div>
         <motion.div
           className="rounded-2xl border-4 border-neutral-800 p-4"
           variants={iconVariants(4)}
